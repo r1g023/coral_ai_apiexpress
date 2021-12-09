@@ -1,11 +1,11 @@
-const router = require("express").Router();
-const Jobs = require("../jobs/jobs-helpers");
+const express = require("express");
+const router = express.Router();
+const Jobs = require("./jobs-helpers");
 
 //GET /api/jobs ---> get jobs
 router.get("/", (req, res, next) => {
   Jobs.getJobs()
     .then((jobs) => {
-      console.log(jobs);
       if (jobs) {
         res.status(200).json(jobs);
       } else {
@@ -23,3 +23,5 @@ router.post("/", (req, res, next) => {
     })
     .catch((err) => next(err));
 });
+
+module.exports = router;

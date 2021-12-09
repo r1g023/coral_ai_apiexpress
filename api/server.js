@@ -4,7 +4,7 @@ const cors = require("cors");
 const helmet = require("helmet");
 
 //GLOBACL MIDDLEWARE
-server.use(cors(), helmet());
+server.use(express.json());
 
 //IMPORT ROUTERS
 const welcomeRouter = require("./welcome-router");
@@ -14,7 +14,7 @@ const jobsRouter = require("../jobs/jobs-router");
 server.use("/", welcomeRouter);
 server.use("/api/jobs", jobsRouter);
 
-//middleware for CATCH ERROR on all endpoints of /api/messages
+//middleware for CATCH ERROR on all endpoints
 server.use((err, req, res, next) => {
   console.log(err);
   res.status(500).json({
