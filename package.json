@@ -1,0 +1,34 @@
+{
+  "name": "coral_ai_apiexpress",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "cross-env NODE_ENV=testing jest --watch --verbose --runInBand --silent",
+    "server": "cross-env NODE_ENV=development nodemon --require dotenv/config index.js",
+    "start": "node index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/rigo0523/coral_ai_apiexpress.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/rigo0523/coral_ai_apiexpress/issues"
+  },
+  "homepage": "https://github.com/rigo0523/coral_ai_apiexpress#readme",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "cross-env": "^7.0.3",
+    "dotenv": "^10.0.0",
+    "eslint": "^8.4.1",
+    "express": "^4.17.1",
+    "helmet": "^4.6.0",
+    "knex": "^0.95.14",
+    "knex-cleaner": "^1.3.1",
+    "nodemon": "^2.0.15",
+    "pg": "^8.7.1"
+  }
+}
